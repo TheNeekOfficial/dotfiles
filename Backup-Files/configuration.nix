@@ -138,5 +138,12 @@
 
   # Install Hyprland
   programs.hyprland.enable = true; 
+
+  # Auto Garbage Collection
+  nix.gc = {
+	automatic = true;
+	dates = "weekly";
+	options = "--delete-older-than 7d";
+  };
 }
 

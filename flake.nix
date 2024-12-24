@@ -5,10 +5,10 @@
 
   outputs = { self, ... }: {
 		my-nvim = {
-			path = ./nvim;
+			path = ./.config/nvim;
 		};
 		my-wm = {
-			path = ./wm;
+			path = ./.config/wm;
 			my-bspwm = {
 				path = ./wm/bspwm;
 			};

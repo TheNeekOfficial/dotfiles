@@ -25,6 +25,20 @@ vim.opt.showmode = false
 -- Enable break indent
 vim.opt.breakindent = true
 
+-- Takes indent from prev line
+vim.opt.autoindent = true
+vim.opt.copyindent = true
+
+-- Indentation options
+vim.opt.preserveindent = true
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.smarttab = true
+
+-- Makes tabs into spaces
+vim.opt.expandtab = true
+
 -- Save undo history
 vim.opt.undofile = true
 

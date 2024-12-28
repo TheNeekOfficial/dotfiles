@@ -7,11 +7,9 @@
 		my-nvim = {
 			path = ./.config/nvim;
 		};
-		my-wm = {
-			path = ./.config/wm;
-			my-bspwm = {
-				path = ./wm/bspwm;
-			};
+		my-bspwm = {
+			# need to add rest
+			path = ./bspwm;
 		};
   };
 }

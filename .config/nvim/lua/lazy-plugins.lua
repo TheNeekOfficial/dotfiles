@@ -57,8 +57,11 @@ require("lazy").setup({
 	-- Highlight, edit, and navigate code
 	require("plugins/treesitter"),
 
-	-- TODO: Obsidian
+	-- Obsidian
 	require("plugins/obsidian"),
+
+	-- Markdown rendering
+	require("plugins.render-markdown"),
 
 	-- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
 	-- Or use telescope!

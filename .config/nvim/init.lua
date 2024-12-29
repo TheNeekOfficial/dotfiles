@@ -13,6 +13,9 @@ require("config.options")
 -- Basic keymaps
 require("config/keys")
 
+-- Imports autocmds I want
+require("config/autocmd")
+
 -- Bootstraps lazy nvim plugin manager
 require("lazy-bootstrap")
 

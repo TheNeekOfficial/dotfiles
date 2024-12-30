@@ -22,7 +22,6 @@ return {
 
 			{ "nvim-telescope/telescope-file-browser.nvim" },
 
-			-- Useful for getting pretty icons, but requires a Nerd Font.
 			{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
 		},
 		config = function()
@@ -86,8 +85,24 @@ return {
 			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 
 			-- File browser setup
-			vim.keymap.set("n", "<leader>fb", ":Telescope file_browser<CR>", { desc = "Telescope [F]ile [B]rowser" })
+			local fb = require("telescope").extensions.file_browser
+			vim.keymap.set("n", "<leader>fb", function()
+				fb.file_browser()
+			end, { desc = "Telescope [F]ile [B]rowser" })
 
+			-- File Browser actions
+			local fb_actions = fb.actions
+			-- NOTE: Tried remapping defaults so could search for them, worked but broke some other defaults
+			-- TODO: either work it out or change things around from default
+
+			-- vim.keymap.set("n", "c", function()
+			-- 	fb_actions.create()
+			-- end, { desc = "File Browser [C]reate" })
+			-- vim.keymap.set("n", "r", function()
+			-- 	fb_actions.rename()
+			-- end, { desc = "File Browser [R]ename" })
+
+			-- Useful for getting pretty icons, but requires a Nerd Font.
 			-- Slightly advanced example of overriding default behavior and theme
 			vim.keymap.set("n", "<leader>/", function()
 				-- You can pass additional configuration to Telescope to change the theme, layout, etc.

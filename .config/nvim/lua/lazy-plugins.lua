@@ -63,6 +63,19 @@ require("lazy").setup({
 	-- Markdown rendering
 	require("plugins.render-markdown"),
 
+	-- Todo list
+	require("plugins.todolist"),
+
+	-- imports any leftout
+	spec = {
+		{ import = "plugins" },
+	},
+
+	-- vimbegood
+	{
+		"ThePrimeagen/vim-be-good",
+	},
+
 	-- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
 	-- Or use telescope!
 	-- In normal mode type `<space>sh` then write `lazy.nvim-plugin`

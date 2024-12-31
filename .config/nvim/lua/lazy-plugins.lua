@@ -66,14 +66,14 @@ require("lazy").setup({
 	-- Todo list
 	require("plugins.todolist"),
 
-	-- imports any leftout
-	spec = {
-		{ import = "plugins" },
-	},
-
 	-- vimbegood
 	{
 		"ThePrimeagen/vim-be-good",
+	},
+
+	-- imports any leftout
+	spec = {
+		{ import = "plugins" },
 	},
 
 	-- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`

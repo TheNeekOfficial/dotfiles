@@ -3,6 +3,9 @@
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+-- enable nerd fonts
+vim.opt.guifont = "JetBrains Mono"
+
 -- Make line numbers default
 vim.opt.number = true
 vim.opt.relativenumber = true

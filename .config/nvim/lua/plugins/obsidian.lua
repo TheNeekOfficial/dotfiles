@@ -30,5 +30,16 @@ return {
 				path = "~/note-files/Notes",
 			},
 		},
+		-- mappings = {
+		-- 	["<leader>oo"] = {
+		-- 		action = function()
+		-- 			return require("obsidian").util.toggle_checkbox()
+		-- 		end,
+		-- 		opts = { noremap = false, expr = true, buffer = true },
+		-- 	},
+		-- },
 	},
+	-- config = function()
+	-- 	vim.keymap.set("n", "<leader>oo", ":ObsidianOpen", { desc = "[O]bsidian[O]pen" })
+	-- end,
 }

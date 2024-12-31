@@ -90,18 +90,6 @@ return {
 				fb.file_browser()
 			end, { desc = "Telescope [F]ile [B]rowser" })
 
-			-- File Browser actions
-			local fb_actions = fb.actions
-			-- NOTE: Tried remapping defaults so could search for them, worked but broke some other defaults
-			-- TODO: either work it out or change things around from default
-
-			-- vim.keymap.set("n", "c", function()
-			-- 	fb_actions.create()
-			-- end, { desc = "File Browser [C]reate" })
-			-- vim.keymap.set("n", "r", function()
-			-- 	fb_actions.rename()
-			-- end, { desc = "File Browser [R]ename" })
-
 			-- Useful for getting pretty icons, but requires a Nerd Font.
 			-- Slightly advanced example of overriding default behavior and theme
 			vim.keymap.set("n", "<leader>/", function()

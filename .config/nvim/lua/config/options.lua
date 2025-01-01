@@ -6,6 +6,10 @@
 -- enable nerd fonts
 vim.opt.guifont = "JetBrains Mono"
 
+-- -- make vi/vim alias
+-- vim.opt.vialias = true
+-- vim.opt.vimalias = true
+
 -- Make line numbers default
 vim.opt.number = true
 vim.opt.relativenumber = true

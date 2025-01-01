@@ -30,16 +30,84 @@ return {
 				path = "~/note-files/Notes",
 			},
 		},
-		-- mappings = {
-		-- 	["<leader>oo"] = {
-		-- 		action = function()
-		-- 			return require("obsidian").util.toggle_checkbox()
-		-- 		end,
-		-- 		opts = { noremap = false, expr = true, buffer = true },
-		-- 	},
-		-- },
+
+		mappings = {
+			["<leader>oc"] = {
+				action = function()
+					return require("obsidian").get_client():command("ObsidianTOC")
+				end,
+			},
+			-- ["gf"] = {
+			-- 	action = function() end,
+			-- },
+		},
+		-- Optional, customize how note IDs are generated given an optional title.
+		---@param title string|?
+		---@return string
+		note_id_func = function(title)
+			-- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
+			-- In this case a note with the title 'My new note' will be given an ID that looks
+			-- like '1657296016-my-new-note', and therefore the file name '1657296016-my-new-note.md'
+			local suffix = ""
+			if title ~= nil then
+				-- If title is given, transform it into valid file name.
+				suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
+			else
+				-- If title is nil, just add 4 random uppercase letters to the suffix.
+				for _ = 1, 4 do
+					suffix = suffix .. string.char(math.random(65, 90))
+				end
+			end
+			return tostring(os.time()) .. "-" .. suffix
+		end,
 	},
-	-- config = function()
-	-- 	vim.keymap.set("n", "<leader>oo", ":ObsidianOpen", { desc = "[O]bsidian[O]pen" })
-	-- end,
+
+	keys = {
+		{
+			desc = "[O]bsidian [O]pen",
+			"<leader>oo",
+			"<cmd>ObsidianOpen<CR>",
+		},
+		{
+			desc = "[O]bsidian [N]ew Note",
+			"<leader>on",
+			"<cmd>ObsidianNew<CR>",
+		},
+		{
+			desc = "[O]bsidian Search [T]ags",
+			"<leader>ot",
+			"<cmd>ObsidianTags<CR>",
+		},
+		{
+			desc = "[O]bsidian [S]earch",
+			"<leader>os",
+			"<cmd>ObsidianSearch<CR>",
+		},
+		{
+			desc = "Show [O]bsidian [B]acklinks",
+			"<leader>ob",
+			"<cmd>ObsidianBacklinks<CR>",
+		},
+		{
+			desc = "[O]bsidian [L]ist [L]inks",
+			"<leader>oll",
+			"<cmd>ObsidianLinks<CR>",
+		},
+		{
+			mode = "x",
+			desc = "New [O]bsidian [L]ink from highlighted text",
+			"ol",
+			"<cmd>ObsidianLink<CR>",
+		},
+		{
+			desc = "[O]bsidian [N]ew Note that'll be [L]inked",
+			"<leader>onl",
+			"<cmd>ObsidianLink<CR>",
+		},
+		{
+			desc = "[G]o [F]ollow Link",
+			"gf",
+			"<cmd>ObsidianFollowLink<CR>",
+		},
+	},
 }

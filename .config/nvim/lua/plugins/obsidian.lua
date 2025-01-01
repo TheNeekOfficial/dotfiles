@@ -89,8 +89,8 @@ return {
 			"<cmd>ObsidianBacklinks<CR>",
 		},
 		{
-			desc = "[O]bsidian [L]ist [L]inks",
-			"<leader>oll",
+			desc = "[O]bsidian List [L]inks",
+			"<leader>ol",
 			"<cmd>ObsidianLinks<CR>",
 		},
 		{
@@ -102,7 +102,7 @@ return {
 		{
 			desc = "[O]bsidian [N]ew Note that'll be [L]inked",
 			"<leader>onl",
-			"<cmd>ObsidianLink<CR>",
+			"<cmd>ObsidianLinkNew<CR>",
 		},
 		{
 			desc = "[G]o [F]ollow Link",

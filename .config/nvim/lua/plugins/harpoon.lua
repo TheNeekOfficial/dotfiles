@@ -62,6 +62,10 @@ return {
 			vim.keymap.set("n", "<C-S-N>", function()
 				harpoon:list():next()
 			end, { desc = "Go to Next in Harpoon List" })
+
+			vim.keymap.set("n", "<leader>x", function()
+				harpoon:list():remove()
+			end, { desc = "Remove item from Harpoon List" })
 		end,
 	},
 }

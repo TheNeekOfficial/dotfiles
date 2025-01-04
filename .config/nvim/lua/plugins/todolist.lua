@@ -1,12 +1,17 @@
 return {
-	"atiladefreitas/dooing",
-	config = function()
-		require("dooing").setup({
-			-- your custom config here (optional)
-			-- keymaps = {
-			-- 	open_todo_scratchpad = "<leader>np",
-			-- 	toggle_priority = "<leader>pp",
-			-- },
-		})
-	end,
+	{
+		"Dan7h3x/LazyDo",
+		branch = "main",
+		keys = { -- recommended keymap for easy toggle LazyDo in normal and insert modes (arbitrary)
+			{
+				"<F2>",
+				"<ESC><CMD>LazyDoToggle<CR>",
+				mode = { "n", "i" },
+			},
+		},
+		event = "VeryLazy",
+		opts = {
+			-- your config here
+		},
+	},
 }

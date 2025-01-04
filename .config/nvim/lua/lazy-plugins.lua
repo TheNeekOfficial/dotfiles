@@ -45,8 +45,9 @@ require("lazy").setup({
 	require("plugins/cmp"),
 
 	-- Colorscheme
-	-- NOTE: Currently monokai pro
-	require("plugins/colorscheme"),
+	-- NOTE: Default: monokai pro
+	require("plugins/colorschemes"),
+	require("plugins/themery"),
 
 	-- Highlight todo, notes, etc in comments
 	require("plugins/todo-comments"),

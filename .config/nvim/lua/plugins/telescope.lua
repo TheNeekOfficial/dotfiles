@@ -60,8 +60,9 @@ return {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown(),
 					},
-					["file_browser"] = {
+					file_browser = {
 						require("telescope.themes").get_dropdown(),
+						hijack_netrw = true,
 					},
 				},
 			})
@@ -87,7 +88,7 @@ return {
 			-- File browser setup
 			local fb = require("telescope").extensions.file_browser
 			vim.keymap.set("n", "<leader>fb", function()
-				fb.file_browser()
+				fb.file_browser({ path = "%:p:h" })
 			end, { desc = "Telescope [F]ile [B]rowser" })
 
 			-- Useful for getting pretty icons, but requires a Nerd Font.

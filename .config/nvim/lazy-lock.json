@@ -1,6 +1,7 @@
 {
   "LazyDo": { "branch": "main", "commit": "3746ca5a8ab06789fc40710180fbc6ea268dd1e6" },
   "LuaSnip": { "branch": "master", "commit": "33b06d72d220aa56a7ce80a0dd6f06c70cd82b9d" },
+  "ashen.nvim": { "branch": "main", "commit": "0206689fd817fbc161634b52bd39037044d9b564" },
   "catppuccin": { "branch": "main", "commit": "f67b886d65a029f12ffa298701fb8f1efd89295d" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "99290b3ec1322070bcfb9e846450a46f6efa50f0" },
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },

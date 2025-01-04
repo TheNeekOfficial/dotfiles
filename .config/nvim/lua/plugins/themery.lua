@@ -46,8 +46,12 @@ return {
 					colorscheme = "tokyonight-night",
 				},
 				{
-					name = "Cattpuccin Mocha",
+					name = "Catppuccin Mocha",
 					colorscheme = "catppuccin-mocha",
+				},
+				{
+					name = "Ashen",
+					colorscheme = "ashen",
 				},
 			},
 			livePreview = true, -- Apply theme while picking. Default to true.

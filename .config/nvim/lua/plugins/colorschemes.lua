@@ -55,4 +55,25 @@ return {
 			vim.cmd("colorscheme kanagawa")
 		end,
 	},
+
+	-- NOTE: Tokyonight
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+		config = function()
+			vim.cmd("colorscheme tokyonight-moon")
+		end,
+	},
+
+	-- NOTE: Catppuccin Mocha
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+		-- require("catppuccin").setup({
+		-- flavour = "mocha",
+		-- }),
+	},
 }

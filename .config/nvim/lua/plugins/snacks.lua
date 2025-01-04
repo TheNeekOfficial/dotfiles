@@ -18,5 +18,21 @@ return {
 			statuscolumn = { enabled = true },
 			words = { enabled = true },
 		},
+		keys = {
+			{
+				"<leader>lg",
+				function()
+					Snacks.lazygit()
+				end,
+				desc = "LazyGit",
+			},
+			{
+				"<leader>nh",
+				function()
+					Snacks.notifier.hide()
+				end,
+				desc = "Dismiss All Notifications",
+			},
+		},
 	},
 }

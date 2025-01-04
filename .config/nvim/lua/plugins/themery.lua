@@ -34,6 +34,18 @@ return {
 					name = "Kanagawa",
 					colorscheme = "kanagawa",
 				},
+				{
+					name = "Tokyo Night Moon",
+					colorscheme = "tokyonight-moon",
+				},
+				{
+					name = "Tokyo Night Night",
+					colorscheme = "tokyonight-night",
+				},
+				{
+					name = "Cattpuccin Mocha",
+					colorscheme = "catppuccin-mocha",
+				},
 			},
 			livePreview = true, -- Apply theme while picking. Default to true.
 		})

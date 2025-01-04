@@ -17,6 +17,9 @@ return {
 				{
 					name = "monokai",
 					colorscheme = "monokai-pro",
+					after = [[
+			      vim.cmd.hi("Comment gui=none")
+			    ]],
 				},
 				{
 					name = "everforest",

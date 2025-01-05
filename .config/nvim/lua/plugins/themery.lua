@@ -38,6 +38,10 @@ return {
 					colorscheme = "kanagawa",
 				},
 				{
+					name = "Kanagawa Dragon",
+					colorscheme = "kanagawa-dragon",
+				},
+				{
 					name = "Tokyo Night Moon",
 					colorscheme = "tokyonight-moon",
 				},
@@ -52,6 +56,10 @@ return {
 				{
 					name = "Ashen",
 					colorscheme = "ashen",
+				},
+				{
+					name = "Sorbet",
+					colorscheme = "sorbet",
 				},
 			},
 			livePreview = true, -- Apply theme while picking. Default to true.

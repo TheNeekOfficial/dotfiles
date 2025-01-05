@@ -76,6 +76,8 @@ return {
 		-- flavour = "mocha",
 		-- }),
 	},
+
+	-- NOTE: Ashen
 	{
 		"ficcdaf/ashen.nvim",
 		lazy = false,
@@ -86,6 +88,14 @@ return {
 		},
 		config = function()
 			vim.cmd("colorscheme ashen")
+		end,
+	},
+
+	-- NOTE: Nightfox & CarbonFox
+	{
+		"EdenEast/nightfox.nvim",
+		config = function()
+			vim.cmd("colorscheme nightfox")
 		end,
 	},
 }

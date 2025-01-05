@@ -61,6 +61,14 @@ return {
 					name = "Sorbet",
 					colorscheme = "sorbet",
 				},
+				{
+					name = "NightFox",
+					colorscheme = "nightfox",
+				},
+				{
+					name = "CarbonFox",
+					colorscheme = "carbonfox",
+				},
 			},
 			livePreview = true, -- Apply theme while picking. Default to true.
 		})

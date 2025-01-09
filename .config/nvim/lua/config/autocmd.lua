@@ -29,3 +29,4 @@ vim.api.nvim_create_autocmd({ "BufWinEnter", "BufEnter" }. {
   callback = function()
     require("discord").enable()
   end
+})

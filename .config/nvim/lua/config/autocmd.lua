@@ -24,7 +24,7 @@ vim.api.nvim_create_autocmd({ "BufLeave", "WinLeave", "WinClosed", "BufWinLeave"
 -- Creates a autocmd group for Cord.nvim
 vim.api.nvim_create_augroup("Discord", { clear = true })
 
-vim.api.nvim_create_autocmd({ "BufWinEnter", "BufEnter" }. {
+vim.api.nvim_create_autocmd({ "BufWinEnter", "BufEnter" }, {
   group = "Discord",
   callback = function()
     require("discord").enable()

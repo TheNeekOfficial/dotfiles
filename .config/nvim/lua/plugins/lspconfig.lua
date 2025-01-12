@@ -260,7 +260,7 @@ return {
 			  local lspconfig = require("lspconfig")
 			  local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 			  lspconfig.nixd.setup({ capabilities = lsp_capabilities })
-			  lspconfig.python-lsp-server.setup({ capabilities = lsp_capabilities })
+			  lspconfig.python_lsp_server.setup({ capabilities = lsp_capabilities })
 			  lspconfig.stylua.setup({ capabilities = lsp_capabilities })
       end
 

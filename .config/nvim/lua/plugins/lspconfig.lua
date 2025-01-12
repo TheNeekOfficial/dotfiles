@@ -12,7 +12,6 @@ return {
 		},
 	},
 	{ "Bilal2453/luvit-meta", lazy = true },
-	{ "wesleimp/stylua.nvim", lazy = true },
 	{
 		-- Main LSP Configuration
 		"neovim/nvim-lspconfig",
@@ -262,7 +261,7 @@ return {
 			  local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 			  lspconfig.nixd.setup({ capabilities = lsp_capabilities })
 			  lspconfig.pylsp.setup({ capabilities = lsp_capabilities })
-			  lspconfig.stylua.setup({ capabilities = lsp_capabilities })
+			  lspconfig.luals.setup({ capabilities = lsp_capabilities })
       end
 
 		end,

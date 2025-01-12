@@ -261,7 +261,7 @@ return {
 			  local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 			  lspconfig.nixd.setup({ capabilities = lsp_capabilities })
 			  lspconfig.pylsp.setup({ capabilities = lsp_capabilities })
-			  lspconfig.lua_ls.setup({ capabilities = lsp_capabilities })
+			  -- lspconfig.lua_ls.setup({ capabilities = lsp_capabilities }) -- NOTE: Couldn't get working so will live without for now
       end
 
 		end,

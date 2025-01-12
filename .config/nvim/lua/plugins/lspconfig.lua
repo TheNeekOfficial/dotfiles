@@ -237,8 +237,8 @@ return {
 			  vim.list_extend(ensure_installed, {
 				  "stylua", -- Used to format Lua code
           "python-lsp-server", -- For python
-          "nix_ls" -- Nix
-          "rnix" -- Nix
+          "nix_ls", -- Nix
+          "rnix", -- Nix
 			  })
 			  require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

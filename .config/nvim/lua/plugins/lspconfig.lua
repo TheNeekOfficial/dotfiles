@@ -210,8 +210,8 @@ return {
 				},
 
 				-- Nix LSP's
-				nil_ls = { },
-				rnix = { },
+				nil_ls = {},
+				rnix = {},
 			}
 
 			-- Ensure the servers and tools above are installed
@@ -227,9 +227,9 @@ return {
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				"stylua", -- Used to format Lua code
-        "python-lsp-server", -- For python
-        "nil_ls", -- Nix
-        "rnix", -- Nix
+				"python-lsp-server", -- For python
+				"nil_ls", -- Nix
+				"rnix", -- Nix
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

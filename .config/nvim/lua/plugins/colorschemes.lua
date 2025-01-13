@@ -26,11 +26,11 @@ return {
 		"sainnhe/everforest",
 		lazy = false,
 		priority = 1000,
-		config = function()
-			-- Optionally configure and load the colorscheme
-			-- directly inside the plugin declaration.
-			vim.cmd.colorscheme("everforest")
-		end,
+		-- config = function()
+		-- 	-- Optionally configure and load the colorscheme
+		-- 	-- directly inside the plugin declaration.
+		-- 	vim.cmd.colorscheme("everforest")
+		-- end,
 	},
 
 	-- NOTE: OneDark
@@ -38,12 +38,12 @@ return {
 		"navarasu/onedark.nvim",
 		lazy = false,
 		priority = 1000,
-		config = function()
-			require("onedark").setup({
-				style = "darker",
-			})
-			require("onedark").load()
-		end,
+		-- config = function()
+		-- 	require("onedark").setup({
+		-- 		style = "darker",
+		-- 	})
+		-- 	require("onedark").load()
+		-- end,
 	},
 
 	-- NOTE: Kanagawa
@@ -51,9 +51,9 @@ return {
 		"rebelot/kanagawa.nvim",
 		lazy = false,
 		priority = 1000,
-		config = function()
-			vim.cmd("colorscheme kanagawa")
-		end,
+		-- config = function()
+		-- 	vim.cmd("colorscheme kanagawa")
+		-- end,
 	},
 
 	-- NOTE: Tokyonight
@@ -62,9 +62,9 @@ return {
 		lazy = false,
 		priority = 1000,
 		opts = {},
-		config = function()
-			vim.cmd("colorscheme tokyonight-moon")
-		end,
+		-- config = function()
+		-- 	vim.cmd("colorscheme tokyonight-moon")
+		-- end,
 	},
 
 	-- NOTE: Catppuccin Mocha
@@ -86,16 +86,16 @@ return {
 		opts = {
 			-- your settings here
 		},
-		config = function()
-			vim.cmd("colorscheme ashen")
-		end,
+		-- config = function()
+		-- 	vim.cmd("colorscheme ashen")
+		-- end,
 	},
 
 	-- NOTE: Nightfox & CarbonFox
 	{
 		"EdenEast/nightfox.nvim",
-		config = function()
-			vim.cmd("colorscheme nightfox")
-		end,
+		-- config = function()
+		-- 	vim.cmd("colorscheme nightfox")
+		-- end,
 	},
 }

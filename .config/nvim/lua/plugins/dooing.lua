@@ -4,9 +4,9 @@ return {
     "Hashino/doing.nvim",
     cmd = "Do",
     keys = {
-      { "<leader>da", function() require("doing").add() end, {}, },
-      { "<leader>dn", function() require("doing").done() end, {}, },
-      { "<leader>de", function() require("doing").edit() end, {}, },
+      { "<leader>da", function() require("doing").add() end, { desc = "[D]ooing [A]dd" }, },
+      { "<leader>dn", function() require("doing").done() end, { desc = "[D]ooing Do[N]e" }, },
+      { "<leader>de", function() require("doing").edit() end, { desc = "[D]ooing [E]dit" }, },
     },
     config = function()
       -- Lualine setup

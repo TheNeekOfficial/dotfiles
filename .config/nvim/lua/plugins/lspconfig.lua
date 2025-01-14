@@ -220,52 +220,52 @@ return {
 			-- NOTE: Only works with systemd just to checking /etc/os-release
 			-- if not want to use systemd use
 			-- https://unix.stackexchange.com/questions/737262/how-to-detect-the-linux-distribution-name-in-neovim-init-lua
-			
+
 			-- NOTE: Toggles Mason if on nixos
-      local fd_os_release = assert(io.open("/etc/os-release"), "r")
-      local s_os_release = fd_os_release:read("*a")
-      fd_os_release:close()
-      s_os_release = s_os_release:lower()
-      local is_nixos = s_os_release:match("nixos")
+			local fd_os_release = assert(io.open("/etc/os-release"), "r")
+			local s_os_release = fd_os_release:read("*a")
+			fd_os_release:close()
+			s_os_release = s_os_release:lower()
+			local is_nixos = s_os_release:match("nixos")
 
-      if is_nixos == nil then
-			  require("mason").setup()
+			if is_nixos == nil then
+				require("mason").setup()
 
-			  -- You can add other tools here that you want Mason to install
-			  -- for you, so that they are available from within Neovim.
-			  local ensure_installed = vim.tbl_keys(servers or {})
-			  vim.list_extend(ensure_installed, {
-				  "stylua", -- Used to format Lua code
-          "python-lsp-server", -- For python
-          "nix_ls", -- Nix
-          "rnix", -- Nix
-			  })
-			  require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+				-- You can add other tools here that you want Mason to install
+				-- for you, so that they are available from within Neovim.
+				local ensure_installed = vim.tbl_keys(servers or {})
+				vim.list_extend(ensure_installed, {
+					"stylua", -- Used to format Lua code
+					"python-lsp-server", -- For python
+					"nix_ls", -- Nix
+					"rnix", -- Nix
+				})
+				require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
-			  require("mason-lspconfig").setup({
-				  handlers = {
-					  function(server_name)
-						  local server = servers[server_name] or {}
-						  -- This handles overriding only values explicitly passed
-						  -- by the server configuration above. Useful when disabling
-						  -- certain features of an LSP (for example, turning off formatting for ts_ls)
-						  server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-						  require("lspconfig")[server_name].setup(server)
-					  end,
-				  },
-			  })
-
-      else
-			  -- Nix setup
-			  local lspconfig = require("lspconfig")
-			  local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
-			  lspconfig.nixd.setup({ capabilities = lsp_capabilities })
-			  lspconfig.pylsp.setup({ capabilities = lsp_capabilities })
-			  -- NOTE: Can add mason setup stuff just for lua_ls if really matters
-			  -- Or just desperately try to get it working
-			  -- lspconfig.lua_ls.setup({ capabilities = lsp_capabilities }) -- NOTE: Couldn't get working so will live without for now
-      end
-
+				require("mason-lspconfig").setup({
+					handlers = {
+						function(server_name)
+							local server = servers[server_name] or {}
+							-- This handles overriding only values explicitly passed
+							-- by the server configuration above. Useful when disabling
+							-- certain features of an LSP (for example, turning off formatting for ts_ls)
+							server.capabilities =
+								vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
+							require("lspconfig")[server_name].setup(server)
+						end,
+					},
+				})
+			else
+				-- Nix setup
+				local lspconfig = require("lspconfig")
+				local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
+				lspconfig.nixd.setup({ capabilities = lsp_capabilities })
+				lspconfig.pylsp.setup({ capabilities = lsp_capabilities })
+				-- NOTE: Can add mason setup stuff just for lua_ls if really matters
+				-- Or just desperately try to get it working
+				-- lspconfig.lua_ls.setup({ capabilities = lsp_capabilities }) -- NOTE: Couldn't get working so will live without for now
+				-- lspconfig.stylua.setup({ capabilities = lsp_capabilities })
+			end
 		end,
 	},
 }

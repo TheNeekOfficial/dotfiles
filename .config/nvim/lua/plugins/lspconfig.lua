@@ -263,8 +263,8 @@ return {
 				lspconfig.pylsp.setup({ capabilities = lsp_capabilities })
 				-- NOTE: Can add mason setup stuff just for lua_ls if really matters
 				-- Or just desperately try to get it working
-				-- lspconfig.lua_ls.setup({ capabilities = lsp_capabilities }) -- NOTE: Couldn't get working so will live without for now
-				-- lspconfig.stylua.setup({ capabilities = lsp_capabilities })
+				lspconfig.lua_ls.setup({ capabilities = lsp_capabilities }) -- NOTE: Couldn't get working so will live without for now
+				lspconfig.stylua.setup({ capabilities = lsp_capabilities })
 			end
 		end,
 	},

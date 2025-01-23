@@ -32,6 +32,7 @@ return {
 			{
 			  name = "Class-Notes",
 			  path = "~/class-notes"
+			},
 		},
 
 		mappings = {

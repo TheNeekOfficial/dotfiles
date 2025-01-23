@@ -26,9 +26,12 @@ return {
 				path = "~/note-files/General",
 			},
 			{
-				name = "Notes",
+				name = "Gen-Notes",
 				path = "~/note-files/Notes",
 			},
+			{
+			  name = "Class-Notes",
+			  path = "~/class-notes"
 		},
 
 		mappings = {

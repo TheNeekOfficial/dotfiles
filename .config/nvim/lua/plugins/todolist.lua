@@ -2,6 +2,7 @@ return {
 	{
 		"Dan7h3x/LazyDo",
 		branch = "main",
+		cmd = { "LazyDoToggle", "LazyDoPin", "LazyDoToggleStorage" },
 		keys = { -- recommended keymap for easy toggle LazyDo in normal and insert modes (arbitrary)
 			{
 				"<F2>",
@@ -12,6 +13,12 @@ return {
 		event = "VeryLazy",
 		opts = {
 			-- your config here
+			storage = {
+				global_path = "/home/dylan/.config/nvim/.lazydo/tasks.md",
+				auto_backup = true,
+				backup_count = 1,
+				compression = true,
+			},
 		},
 	},
 }

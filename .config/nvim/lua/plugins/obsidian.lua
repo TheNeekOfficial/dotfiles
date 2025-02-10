@@ -31,7 +31,7 @@ return {
 			},
 			{
 			  name = "Class-Notes",
-			  path = "~/class-notes"
+			  path = "~/class-notes",
 			},
 		},
 

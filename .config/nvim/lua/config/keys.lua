@@ -32,7 +32,7 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower win
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 -- Sets leader y to yank to clipboard
-vim.keymap.set("n, x", "<leader>y", '"+y', { desc = "Copy to clipboard"})
+vim.keymap.set({"n", "x"}, "<leader>y", "\"+y", { desc = "Copy to clipboard"})
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`

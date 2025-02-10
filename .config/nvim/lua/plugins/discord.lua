@@ -3,6 +3,7 @@ return {
 		"vyfor/cord.nvim",
 		branch = "client-server",
 		build = ":Cord update",
+		version = "*",
 		config = function()
 			local blacklist = {
 				"/home/dylan/",

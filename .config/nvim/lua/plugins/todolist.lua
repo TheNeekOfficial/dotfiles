@@ -14,7 +14,7 @@ return {
 		opts = {
 			-- your config here
 			storage = {
-				global_path = "/home/dylan/.config/nvim/.lazydo/tasks.md",
+				global_path = "/home/dylan/.config/nvim/.lazydo/tasks.json",
 				auto_backup = true,
 				backup_count = 1,
 				compression = true,

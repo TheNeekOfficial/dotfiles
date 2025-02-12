@@ -102,8 +102,10 @@ return {
     "dgox16/oldworld.nvim",
     lazy = false,
     priority = 1000,
-    require("oldworld").setup({
-      variant = "oled",
-    })
+    config = function()
+      require("oldworld").setup({
+        variant = "oled",
+      })
+    end
   }
 }

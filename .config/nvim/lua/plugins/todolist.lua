@@ -1,3 +1,10 @@
+local fd_os_release = assert(io.open("/etc/os-release"), "r")
+local s_os_release = fd_os_release:read("*a")
+fd_os_release:close()
+s_os_release = s_os_release:lower()
+local is_nixos = s_os_release:match("nixos")
+local storage_path = is_nixos and "/home/dylan/dotfiles/.config/nvim/.lazydo/tasks.json"
+	or "/home/dylan/.config/nvim/.lazydo/tasks.json"
 return {
 	{
 		"Dan7h3x/LazyDo",
@@ -13,17 +20,8 @@ return {
 		event = "VeryLazy",
 		opts = {
 			-- your config here
-			local fd_os_release = assert(io.open("/etc/os-release"), "r")
-			local s_os_release = fd_os_release:read("*a")
-			fd_os_release:close()
-			s_os_release = s_os_release:lower()
-			local is_nixos = s_os_release:match("nixos")
 			storage = {
-        if is_nixos == nil then
-				  global_path = "/home/dylan/.config/nvim/.lazydo/tasks.json",
-			  else
-			    global_path = "/home/dylan/dotfiles/.config/.lazydo/tasks.json",
-			  end
+				global_path = storage_path,
 				auto_backup = true,
 				backup_count = 1,
 				compression = true,

@@ -69,6 +69,10 @@ return {
 					name = "CarbonFox",
 					colorscheme = "carbonfox",
 				},
+				{
+				  name = "Old World",
+				  colorscheme = "oldworld",
+				},
 			},
 			livePreview = true, -- Apply theme while picking. Default to true.
 		})

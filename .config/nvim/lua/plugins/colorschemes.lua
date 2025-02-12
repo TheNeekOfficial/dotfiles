@@ -98,4 +98,12 @@ return {
 		-- 	vim.cmd("colorscheme nightfox")
 		-- end,
 	},
+	{
+    "dgox16/oldworld.nvim",
+    lazy = false,
+    priority = 1000,
+    require("oldworld").setup({
+      variant = "oled",
+    })
+  }
 }

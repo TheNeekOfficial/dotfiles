@@ -300,6 +300,6 @@ return {
 	--   } -- NOTE: Couldn't get working so will live without for now
 	-- })
 	-- lspconfig.stylua.setup({ capabilities = lsp_capabilities })
-	--   end,
+	  end,
 	},
 }

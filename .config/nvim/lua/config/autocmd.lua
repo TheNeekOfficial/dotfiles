@@ -20,3 +20,11 @@ vim.api.nvim_create_autocmd({ "BufLeave", "WinLeave", "WinClosed", "BufWinLeave"
 		vim.opt.conceallevel = 0
 	end,
 })
+
+-- vim.api.nvim_create_autocmd({ "BufWinEnter", "BufEnter"}, {
+--   group = "Tasks",
+--   pattern = "*",
+--   callback = function()
+--    -- NOTE: Work out how to run specific keymaps here
+--   end,
+-- })

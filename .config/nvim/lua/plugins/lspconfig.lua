@@ -263,9 +263,9 @@ return {
 				lspconfig.pylsp.setup({ capabilities = lsp_capabilities })
         lspconfig.rust_analyzer.setup({ capabilities = lsp_capabilities })
         lspconfig.ruby_lsp.setup({ capabilities = lsp_capabilities })
-        lspconfig.vscode-html-languageserver.setup({ capabilities = lsp_capabilities })
-        lspconfig.javascript-typescript.setup({ capabilities = lsp_capabilities })
-        lspconfig.typescript-language-server.setup({ capabilities = lsp_capabilties })
+        lspconfig.vscode_html_languageserver.setup({ capabilities = lsp_capabilities })
+        lspconfig.javascript_typescript.setup({ capabilities = lsp_capabilities })
+        lspconfig.typescript_language_server.setup({ capabilities = lsp_capabilties })
 
 
 				-- NOTE: Can add mason setup stuff just for lua_ls if really matters

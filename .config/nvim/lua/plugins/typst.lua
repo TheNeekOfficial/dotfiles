@@ -4,7 +4,13 @@ return {
 		-- lazy = false, -- or ft = 'typst'
 		ft = "typst",
 		version = "1.*",
-		opts = {}, -- lazy.nvim will implicitly calls `setup {}`
+		opts = {
+
+			dependencies_bin = {
+				["tinymist"] = nil,
+				["websocat"] = nil,
+			},
+		}, -- lazy.nvim will implicitly calls `setup {}`
 		-- config = function()
 		-- 	require("typst-preview").setup()
 		-- end,

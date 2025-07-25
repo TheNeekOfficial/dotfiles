@@ -67,6 +67,9 @@ require("lazy").setup({
 	-- Todo list
 	require("plugins.todolist"),
 
+	-- typst config
+	require("plugins.typst"),
+
 	-- vimbegood
 	{
 		"ThePrimeagen/vim-be-good",

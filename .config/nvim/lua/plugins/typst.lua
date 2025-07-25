@@ -10,7 +10,7 @@ return {
 				["tinymist"] = nil,
 				["websocat"] = nil,
 			},
-			open_cmd = "zen %s -P typst-preview --class typst-preview",
+			open_cmd = "firefox %s -P typst-preview --class typst-preview",
 		}, -- lazy.nvim will implicitly calls `setup {}`
 		-- config = function()
 		-- 	require("typst-preview").setup()

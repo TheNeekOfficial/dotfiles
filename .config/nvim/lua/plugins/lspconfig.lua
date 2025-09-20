@@ -261,14 +261,9 @@ return {
 				local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 				lspconfig.nixd.setup({ capabilities = lsp_capabilities })
 				lspconfig.pylsp.setup({ capabilities = lsp_capabilities })
-<<<<<<< HEAD
 				lspconfig.rust_analyzer.setup({ capabilities = lsp_capabilities })
 				lspconfig.ruby_lsp.setup({ capabilities = lsp_capabilities })
-				-- lspconfig.vscode_html_languageserver.setup({ capabilities = lsp_capabilities })
-				-- lspconfig.javascript_typescript.setup({ capabilities = lsp_capabilities })
-				-- lspconfig.typescript_language_server.setup({ capabilities = lsp_capabilties })
 				lspconfig.ts_ls.setup({ capabilities = lsp_capabilities })
-=======
         lspconfig.rust_analyzer.setup({ capabilities = lsp_capabilities })
         lspconfig.ruby_lsp.setup({ capabilities = lsp_capabilities })
         lspconfig.vscode_html_languageserver.setup({ capabilities = lsp_capabilities })
@@ -276,7 +271,6 @@ return {
         lspconfig.typescript_language_server.setup({ capabilities = lsp_capabilties })
         lspconfig.ts_ls.setup({ capabilities = lsp_capabilities })
         lspconfig.tailwindcss.setup({ capabilities = lsp_capabilities })
->>>>>>> 7d1522e (added some lsp servers)
 
 				lspconfig["tinymist"].setup({
 
